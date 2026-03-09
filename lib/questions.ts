@@ -948,4 +948,1037 @@ export const fallbackQuestions = [
     topic: "Transitions",
     type: "multi"
   },
+
+  // ─── CSS Introduction (extra) ───
+  {
+    question: "Which property changes the background color of an element?",
+    options: ["color", "bg-color", "background-color", "fill"],
+    correct: 2,
+    explanation: "background-color sets the background color of an element.",
+    topic: "CSS Introduction"
+  },
+  {
+    question: "What does the 'color' property control?",
+    options: ["Background color", "Border color", "Text/foreground color", "Shadow color"],
+    correct: 2,
+    explanation: "The color property sets the color of text content inside an element.",
+    topic: "CSS Introduction"
+  },
+  {
+    question: "Which statements about CSS are correct? (Select all that apply)",
+    options: ["CSS stands for Cascading Style Sheets", "CSS can style colors, fonts, and layouts", "CSS is a programming language", "CSS rules consist of a selector and declaration block"],
+    correct: [0, 1, 3],
+    explanation: "CSS is a styling language (not a programming language). It uses selector + declaration block syntax.",
+    topic: "CSS Introduction",
+    type: "multi"
+  },
+
+  // ─── CSS Types (extra) ───
+  {
+    question: "Where is Internal CSS defined?",
+    options: ["In an external file", "Inside the <body>", "Inside the <head> in a <style> tag", "In a JavaScript file"],
+    correct: 2,
+    explanation: "Internal CSS is placed inside a <style> tag within the <head> section.",
+    topic: "CSS Types"
+  },
+  {
+    question: "Where is Inline CSS written?",
+    options: ["Inside the <head> tag", "In the style attribute of an HTML element", "In an external .css file", "Below the <body> tag"],
+    correct: 1,
+    explanation: "Inline CSS is written directly in the HTML element's style attribute. e.g. <p style='color:red'>",
+    topic: "CSS Types"
+  },
+  {
+    question: "Which are true about Inline CSS? (Select all that apply)",
+    options: ["Written in the style attribute", "Has the highest specificity among the 3 types", "Can be reused across multiple pages easily", "Overrides internal and external CSS by default"],
+    correct: [0, 1, 3],
+    explanation: "Inline CSS is in the style attribute, has highest specificity, and overrides other types. It cannot be reused across pages.",
+    topic: "CSS Types",
+    type: "multi"
+  },
+
+  // ─── Tag Selectors (extra) ───
+  {
+    question: "What does a tag selector target?",
+    options: ["Elements with a specific class", "Elements with a specific ID", "All elements of a specific HTML tag", "Only the first element on the page"],
+    correct: 2,
+    explanation: "A tag selector like 'p' or 'h1' targets all elements of that HTML tag type.",
+    topic: "Tag Selectors"
+  },
+  {
+    question: "Which selector would style all <h1> elements?",
+    options: [".h1", "#h1", "h1", "*h1"],
+    correct: 2,
+    explanation: "Tag selectors use the element name directly without any prefix.",
+    topic: "Tag Selectors"
+  },
+
+  // ─── Grouping Selectors (extra) ───
+  {
+    question: "What does 'h1, h2, p { color: red; }' do?",
+    options: ["Only styles h1", "Styles h1, h2, and p all with red color", "Creates a selector named h1h2p", "Only works if all three exist on the page"],
+    correct: 1,
+    explanation: "Comma-separated selectors apply the same rule to all listed elements.",
+    topic: "Grouping Selectors"
+  },
+  {
+    question: "Which are true about grouping selectors? (Select all that apply)",
+    options: ["Uses comma to separate selectors", "Reduces code repetition", "All selectors must be the same type", "One rule applies to all grouped elements"],
+    correct: [0, 1, 3],
+    explanation: "Grouping uses commas, reduces repetition, and applies one rule to all. Selectors can be any type (tag, class, ID mixed).",
+    topic: "Grouping Selectors",
+    type: "multi"
+  },
+
+  // ─── Colors (extra) ───
+  {
+    question: "What is the HEX value for white?",
+    options: ["#000000", "#ffffff", "#ff0000", "#cccccc"],
+    correct: 1,
+    explanation: "#ffffff is white — all three color channels (R, G, B) at maximum.",
+    topic: "Colors"
+  },
+  {
+    question: "What does HSL stand for in CSS colors?",
+    options: ["Height, Saturation, Lightness", "Hue, Saturation, Lightness", "Hue, Shade, Luminance", "High, Standard, Low"],
+    correct: 1,
+    explanation: "HSL = Hue (0-360 degrees), Saturation (0-100%), Lightness (0-100%).",
+    topic: "Colors"
+  },
+  {
+    question: "Which statements about RGBA are correct? (Select all that apply)",
+    options: ["The A stands for Alpha (transparency)", "Alpha value 0 means fully transparent", "Alpha value 1 means fully opaque", "Alpha value can go up to 255"],
+    correct: [0, 1, 2],
+    explanation: "In RGBA, A = Alpha. 0 = fully transparent, 1 = fully opaque. Alpha ranges from 0 to 1, not 0 to 255.",
+    topic: "Colors",
+    type: "multi"
+  },
+
+  // ─── Typography (extra) ───
+  {
+    question: "What does font-size: 16px mean?",
+    options: ["16 cm font", "16 pixel font size", "16% font size", "16 point font"],
+    correct: 1,
+    explanation: "px = pixels, so 16px means a font size of 16 pixels.",
+    topic: "Typography"
+  },
+  {
+    question: "How do you use Google Fonts in CSS?",
+    options: ["Via @import or <link> tag", "Via font-download property", "Via JavaScript only", "By downloading into the CSS file"],
+    correct: 0,
+    explanation: "Google Fonts are imported using @import url() or an HTML <link> tag.",
+    topic: "Typography"
+  },
+  {
+    question: "Which are valid font-weight values? (Select all that apply)",
+    options: ["bold", "700", "normal", "thick"],
+    correct: [0, 1, 2],
+    explanation: "bold, 700, and normal are valid font-weight values. 'thick' is not valid.",
+    topic: "Typography",
+    type: "multi"
+  },
+  {
+    question: "Which statements about font-family are correct? (Select all that apply)",
+    options: ["You can specify multiple fallback fonts", "Fonts with spaces in name need quotes", "font-family can only hold one font", "Generic families like serif are valid values"],
+    correct: [0, 1, 3],
+    explanation: "font-family accepts a comma-separated fallback list. Multi-word fonts need quotes. Generic families like serif are valid final fallbacks.",
+    topic: "Typography",
+    type: "multi"
+  },
+
+  // ─── Text Styles (extra) ───
+  {
+    question: "What does text-align: center do?",
+    options: ["Centers the element itself", "Horizontally centers the text/inline content", "Vertically centers content", "Centers images only"],
+    correct: 1,
+    explanation: "text-align only aligns text and inline content horizontally — not the element itself.",
+    topic: "Text Styles"
+  },
+  {
+    question: "Which property adds an underline to text?",
+    options: ["text-style: underline", "font-decoration: underline", "text-decoration: underline", "underline: true"],
+    correct: 2,
+    explanation: "text-decoration: underline adds a line under the text.",
+    topic: "Text Styles"
+  },
+  {
+    question: "Which are valid values for text-transform? (Select all that apply)",
+    options: ["uppercase", "lowercase", "capitalize", "boldcase"],
+    correct: [0, 1, 2],
+    explanation: "uppercase, lowercase, and capitalize are valid text-transform values. 'boldcase' does not exist.",
+    topic: "Text Styles",
+    type: "multi"
+  },
+  {
+    question: "Which properties control text spacing? (Select all that apply)",
+    options: ["letter-spacing", "word-spacing", "line-height", "font-size"],
+    correct: [0, 1, 2],
+    explanation: "letter-spacing, word-spacing, and line-height all control spacing. font-size controls scale, not spacing.",
+    topic: "Text Styles",
+    type: "multi"
+  },
+
+  // ─── Margin (extra) ───
+  {
+    question: "When does margin collapse occur?",
+    options: ["When padding is zero", "When two vertical margins of adjacent blocks meet", "When element is hidden", "It never happens"],
+    correct: 1,
+    explanation: "When two block elements' vertical margins meet, only the larger margin applies — this is margin collapse.",
+    topic: "Margin"
+  },
+  {
+    question: "What is the difference between margin and padding?",
+    options: ["No difference", "Margin is outside the border; padding is inside between content and border", "Padding is outside; margin is inside", "Both are inside the border"],
+    correct: 1,
+    explanation: "Margin creates space outside the border. Padding creates space inside the border, between the content and the border.",
+    topic: "Margin"
+  },
+  {
+    question: "Which shorthand margin declarations are valid? (Select all that apply)",
+    options: ["margin: 10px", "margin: 10px 20px", "margin: 10px 20px 30px 40px", "margin: top right bottom left"],
+    correct: [0, 1, 2],
+    explanation: "1, 2, or 4 numeric values are valid shorthand. The last option uses words instead of values, which is invalid.",
+    topic: "Margin",
+    type: "multi"
+  },
+
+  // ─── Div and Span (extra) ───
+  {
+    question: "When should you use <span> instead of <div>?",
+    options: ["For block-level containers", "For styling inline portions of text", "For page sections", "For navigation menus"],
+    correct: 1,
+    explanation: "<span> is used to wrap and style a portion of inline text without breaking the flow.",
+    topic: "Div and Span"
+  },
+  {
+    question: "Which are true about <div>? (Select all that apply)",
+    options: ["It is a block-level element", "It takes up the full available width by default", "It is used as a generic container", "It displays inline by default"],
+    correct: [0, 1, 2],
+    explanation: "<div> is block-level, takes full width, and is a generic container. It does NOT display inline by default.",
+    topic: "Div and Span",
+    type: "multi"
+  },
+
+  // ─── ID and Class (extra) ───
+  {
+    question: "What is the syntax for an ID selector?",
+    options: [".header", "#header", "*header", "@header"],
+    correct: 1,
+    explanation: "ID selectors start with #. An ID should only be used once per page.",
+    topic: "ID and Class"
+  },
+  {
+    question: "Can one element have multiple classes?",
+    options: ["No, only one class per element", "Yes, separated by spaces in the class attribute", "Yes, but only two maximum", "Only with JavaScript"],
+    correct: 1,
+    explanation: "Multiple classes can be applied: class='btn primary large' — space-separated in the HTML attribute.",
+    topic: "ID and Class"
+  },
+
+  // ─── Backgrounds (extra) ───
+  {
+    question: "Which property sets a background image?",
+    options: ["background-src", "background-image", "bg-image", "image-url"],
+    correct: 1,
+    explanation: "background-image: url('path/to/image.jpg') sets the background image of an element.",
+    topic: "Backgrounds"
+  },
+  {
+    question: "What does background-position: center do?",
+    options: ["Centers the element on the page", "Positions the background image in the center of the element", "Centers the text inside", "Moves the element to center"],
+    correct: 1,
+    explanation: "background-position controls where the background image is placed within the element.",
+    topic: "Backgrounds"
+  },
+  {
+    question: "Which are background shorthand components? (Select all that apply)",
+    options: ["background-color", "background-image", "background-position", "background-font"],
+    correct: [0, 1, 2],
+    explanation: "background shorthand includes color, image, position, size, repeat, and attachment. background-font does not exist.",
+    topic: "Backgrounds",
+    type: "multi"
+  },
+
+  // ─── Width and Size (extra) ───
+  {
+    question: "What does min-width do?",
+    options: ["Sets maximum width", "Prevents element from shrinking below a certain width", "Sets width to auto", "Hides element if too small"],
+    correct: 1,
+    explanation: "min-width ensures the element never gets smaller than the specified value.",
+    topic: "Width and Size"
+  },
+  {
+    question: "What is the difference between width: 100% and width: 100vw?",
+    options: ["They are the same", "100% is relative to parent; 100vw is relative to the viewport", "100vw is relative to parent; 100% is relative to viewport", "Both are relative to the screen"],
+    correct: 1,
+    explanation: "100% takes the full width of the parent container; 100vw takes the full viewport width regardless of parent.",
+    topic: "Width and Size"
+  },
+  {
+    question: "Which are true about max-width? (Select all that apply)",
+    options: ["It prevents the element from growing beyond a set size", "It overrides width if the element would exceed max-width", "It works well for responsive design", "It sets the minimum size of an element"],
+    correct: [0, 1, 2],
+    explanation: "max-width caps the element's size, overrides width when needed, and is great for responsive layouts. It does NOT set the minimum size.",
+    topic: "Width and Size",
+    type: "multi"
+  },
+
+  // ─── Box Model (extra) ───
+  {
+    question: "What is the default box-sizing in CSS?",
+    options: ["border-box", "padding-box", "content-box", "margin-box"],
+    correct: 2,
+    explanation: "Default is content-box — width applies only to content; padding and border are added on top.",
+    topic: "Box Model"
+  },
+  {
+    question: "Which are true about box-sizing: border-box? (Select all that apply)",
+    options: ["Padding is included within the defined width", "Border is included within the defined width", "Margin is included within the defined width", "Total size stays predictable"],
+    correct: [0, 1, 3],
+    explanation: "border-box includes padding and border inside the defined width. Margin is always outside and is NOT included.",
+    topic: "Box Model",
+    type: "multi"
+  },
+  {
+    question: "With content-box, which values are added ON TOP of the defined width? (Select all that apply)",
+    options: ["Padding", "Border", "Margin", "Color"],
+    correct: [0, 1, 2],
+    explanation: "In content-box, padding, border, and margin are added on top of the defined width. Color does not affect dimensions.",
+    topic: "Box Model",
+    type: "multi"
+  },
+
+  // ─── Nth-Child (extra) ───
+  {
+    question: "How do you select the last child of an element?",
+    options: [":end-child", ":last-child", ":final-child", ":nth-child(last)"],
+    correct: 1,
+    explanation: "The :last-child pseudo-class selects the last child element of its parent.",
+    topic: "Nth-Child"
+  },
+  {
+    question: "How do you select only odd-numbered rows in a table?",
+    options: ["tr:nth-child(odd)", "tr:nth-child(2n+1)", "Both A and B", "tr:odd"],
+    correct: 2,
+    explanation: "Both :nth-child(odd) and :nth-child(2n+1) select odd-numbered rows.",
+    topic: "Nth-Child"
+  },
+  {
+    question: "Which are true about :nth-child? (Select all that apply)",
+    options: ["It accepts keywords like 'odd' and 'even'", "It accepts formulas like 2n+1", "It counts only same-tag siblings", "It starts counting from 1"],
+    correct: [0, 1, 3],
+    explanation: "nth-child accepts keywords and formulas, starts at 1. It counts ALL sibling elements regardless of tag — that is nth-of-type.",
+    topic: "Nth-Child",
+    type: "multi"
+  },
+
+  // ─── Descendant Selectors (extra) ───
+  {
+    question: "How do you select all <p> tags anywhere inside a <div>?",
+    options: ["div p", "div+p", "div>p", "div.p"],
+    correct: 0,
+    explanation: "A space (descendant combinator) selects all matching elements at any depth inside the parent.",
+    topic: "Descendant Selectors"
+  },
+  {
+    question: "What does the adjacent sibling combinator (+) do?",
+    options: ["Selects all siblings", "Selects only the immediately following sibling", "Selects the parent element", "Selects all descendants"],
+    correct: 1,
+    explanation: "div + p selects only the first <p> that immediately follows a <div>.",
+    topic: "Descendant Selectors"
+  },
+  {
+    question: "What does the general sibling combinator (~) select?",
+    options: ["Only the first sibling", "All following siblings of the same type", "The parent element", "Only direct children"],
+    correct: 1,
+    explanation: "div ~ p selects all <p> elements that are siblings after a <div>, not just the immediate one.",
+    topic: "Descendant Selectors",
+  },
+
+  // ─── First-of-Type (extra) ───
+  {
+    question: "What does p:last-of-type select?",
+    options: ["Last paragraph on the entire page", "Last p element within its parent", "Only the last paragraph with a class", "Nothing"],
+    correct: 1,
+    explanation: "last-of-type selects the last element of that specific type within its parent.",
+    topic: "First-of-Type"
+  },
+  {
+    question: "Which are true about :first-of-type vs :first-child? (Select all that apply)",
+    options: [":first-child selects the first child regardless of type", ":first-of-type selects first of its specific tag within the parent", "Both always select the same element", ":first-of-type filters by tag before selecting"],
+    correct: [0, 1, 3],
+    explanation: ":first-child is any first child, :first-of-type is first of that specific tag. They can select different elements.",
+    topic: "First-of-Type",
+    type: "multi"
+  },
+
+  // ─── Pseudo Classes (extra) ───
+  {
+    question: "When does the :visited pseudo-class apply?",
+    options: ["When link is hovered", "When the link has already been visited by the user", "When the link is active", "When the link is disabled"],
+    correct: 1,
+    explanation: ":visited applies to links the user has previously clicked and visited.",
+    topic: "Pseudo Classes"
+  },
+  {
+    question: "What does the :active pseudo-class represent?",
+    options: ["A hovered element", "An element being clicked/activated at that moment", "A focused input", "A visited link"],
+    correct: 1,
+    explanation: ":active applies while an element is being activated — e.g. the moment a button is clicked.",
+    topic: "Pseudo Classes"
+  },
+  {
+    question: "Which pseudo-classes apply to links? (Select all that apply)",
+    options: [":link", ":visited", ":hover", ":checked"],
+    correct: [0, 1, 2],
+    explanation: ":link (unvisited), :visited, and :hover commonly apply to links. :checked applies to checkboxes/radio inputs.",
+    topic: "Pseudo Classes",
+    type: "multi"
+  },
+
+  // ─── Borders (extra) ───
+  {
+    question: "How do you add a border only on the bottom of an element?",
+    options: ["border: bottom", "border-bottom: 1px solid black", "bottom-border: 1px", "border-side: bottom"],
+    correct: 1,
+    explanation: "border-bottom sets only the bottom border of an element.",
+    topic: "Borders"
+  },
+  {
+    question: "Which value creates a dashed border?",
+    options: ["border-style: broken", "border-style: dashed", "border: dash", "border-type: dashes"],
+    correct: 1,
+    explanation: "border-style: dashed creates a dashed border line.",
+    topic: "Borders"
+  },
+  {
+    question: "Which individual border properties exist? (Select all that apply)",
+    options: ["border-top", "border-left", "border-right", "border-center"],
+    correct: [0, 1, 2],
+    explanation: "border-top, border-left, border-right (and border-bottom) are all valid. 'border-center' does not exist.",
+    topic: "Borders",
+    type: "multi"
+  },
+
+  // ─── CSS Units (extra) ───
+  {
+    question: "Which unit is always relative to the root (<html>) element's font size?",
+    options: ["px", "em", "rem", "%"],
+    correct: 2,
+    explanation: "'rem' is always relative to the root element's font size, unaffected by nesting.",
+    topic: "CSS Units"
+  },
+  {
+    question: "What does 1vh equal?",
+    options: ["1% of the parent height", "1% of the viewport height", "1 pixel height", "1% of the screen height"],
+    correct: 1,
+    explanation: "1vh = 1% of the viewport height, so 100vh = the full viewport height.",
+    topic: "CSS Units"
+  },
+  {
+    question: "Which are absolute CSS units? (Select all that apply)",
+    options: ["px", "cm", "mm", "vw"],
+    correct: [0, 1, 2],
+    explanation: "px, cm, and mm are absolute units with fixed sizes. vw is relative to the viewport width.",
+    topic: "CSS Units",
+    type: "multi"
+  },
+  {
+    question: "Which statements about the rem unit are correct? (Select all that apply)",
+    options: ["rem is relative to the root element", "rem is not affected by parent element nesting", "rem is relative to the parent element", "rem is consistent across the entire document"],
+    correct: [0, 1, 3],
+    explanation: "rem is always relative to root (<html>), unaffected by nesting, making it consistent. em (not rem) is relative to parent.",
+    topic: "CSS Units",
+    type: "multi"
+  },
+
+  // ─── List Style (extra) ───
+  {
+    question: "How do you change list numbers to Roman numerals?",
+    options: ["list-type: roman", "list-style-type: upper-roman", "counter: roman", "number: roman"],
+    correct: 1,
+    explanation: "list-style-type: upper-roman or lower-roman changes list numbering to Roman numerals.",
+    topic: "List Style"
+  },
+  {
+    question: "What does list-style-position: inside do?",
+    options: ["Hides the list marker", "Places the list marker inside the content box", "Moves list items inside the parent", "Centers list items"],
+    correct: 1,
+    explanation: "list-style-position: inside makes the marker part of the text flow inside the list item.",
+    topic: "List Style"
+  },
+
+  // ─── Line-Height (extra) ───
+  {
+    question: "What is the recommended unitless line-height for body text?",
+    options: ["0.5", "1.0", "1.5", "3.0"],
+    correct: 2,
+    explanation: "A line-height of 1.4–1.6 is generally recommended for body text readability.",
+    topic: "Line-Height"
+  },
+  {
+    question: "What happens when line-height is set to 1?",
+    options: ["1px height", "Line height equals the font size exactly", "Lines overlap", "Text disappears"],
+    correct: 1,
+    explanation: "line-height: 1 means the line height is exactly equal to the font-size — no extra space.",
+    topic: "Line-Height"
+  },
+
+  // ─── Specificity (extra) ───
+  {
+    question: "What does !important do in CSS?",
+    options: ["Adds a comment", "Gives the property the highest priority, overriding specificity", "Deletes the style", "Disables the style"],
+    correct: 1,
+    explanation: "!important overrides all other declarations regardless of specificity — use sparingly.",
+    topic: "Specificity"
+  },
+  {
+    question: "Which has higher specificity: 'div p.highlight' or '#main'?",
+    options: ["div p.highlight", "#main", "They are equal", "Depends on order"],
+    correct: 1,
+    explanation: "#main has specificity (0,1,0,0). div p.highlight has (0,0,1,2). ID always beats class + tag combos.",
+    topic: "Specificity"
+  },
+  {
+    question: "Which statements about CSS specificity are correct? (Select all that apply)",
+    options: ["ID has higher specificity than class", "Inline styles override external CSS by default", "!important overrides all normal specificity", "More selectors always means higher specificity"],
+    correct: [0, 1, 2],
+    explanation: "IDs beat classes, inline styles override external, !important wins over normal rules. More selectors don't always win — type matters.",
+    topic: "Specificity",
+    type: "multi"
+  },
+
+  // ─── Float and Clear (extra) ───
+  {
+    question: "What does clear: both do?",
+    options: ["Clears all styles", "Forces element to start below any floated elements on both sides", "Removes float", "Clears the border"],
+    correct: 1,
+    explanation: "clear: both forces an element to appear below any floating elements on either side.",
+    topic: "Float and Clear"
+  },
+  {
+    question: "What is the 'clearfix' technique used for?",
+    options: ["Fixing broken CSS", "Making a parent container contain its floated children", "Clearing all CSS rules", "Removing floats from all elements"],
+    correct: 1,
+    explanation: "Clearfix is a hack to make a parent element wrap around its floated children that would otherwise collapse.",
+    topic: "Float and Clear"
+  },
+  {
+    question: "Which are valid values for the clear property? (Select all that apply)",
+    options: ["left", "right", "both", "all"],
+    correct: [0, 1, 2],
+    explanation: "clear: left, right, and both are valid. 'all' is not a valid clear value.",
+    topic: "Float and Clear",
+    type: "multi"
+  },
+
+  // ─── Display Properties (extra) ───
+  {
+    question: "What is the default display value of a <span>?",
+    options: ["block", "inline", "inline-block", "flex"],
+    correct: 1,
+    explanation: "<span> is an inline element by default — it does not start on a new line.",
+    topic: "Display Properties"
+  },
+  {
+    question: "What is the default display value of a <div>?",
+    options: ["inline", "block", "flex", "grid"],
+    correct: 1,
+    explanation: "<div> is a block-level element by default — it starts on a new line and takes full width.",
+    topic: "Display Properties"
+  },
+  {
+    question: "Which are correct about display: inline-block? (Select all that apply)",
+    options: ["It allows setting width and height", "It stays in inline flow with other elements", "It starts on a new line like block", "It is useful for navigation items"],
+    correct: [0, 1, 3],
+    explanation: "inline-block allows width/height, flows inline, and is great for nav items. It does NOT start on a new line.",
+    topic: "Display Properties",
+    type: "multi"
+  },
+
+  // ─── Flexbox (extra) ───
+  {
+    question: "What does 'flex: 1' shorthand expand to?",
+    options: ["flex-grow: 1, flex-shrink: 0, flex-basis: auto", "flex-grow: 1, flex-shrink: 1, flex-basis: 0%", "flex-grow: 0, flex-shrink: 1, flex-basis: 1px", "flex-grow: 1, flex-shrink: 1, flex-basis: 100%"],
+    correct: 1,
+    explanation: "flex: 1 expands to flex-grow: 1, flex-shrink: 1, flex-basis: 0% — item can grow and shrink equally.",
+    topic: "Flexbox"
+  },
+  {
+    question: "What value of flex-direction makes items flow top to bottom?",
+    options: ["row", "row-reverse", "column", "column-reverse"],
+    correct: 2,
+    explanation: "flex-direction: column stacks flex items vertically from top to bottom.",
+    topic: "Flexbox"
+  },
+  {
+    question: "What does the 'order' property do in Flexbox?",
+    options: ["Sets the item size", "Controls the visual order of a specific flex item", "Sets item alignment", "Removes item from flow"],
+    correct: 1,
+    explanation: "order accepts an integer — lower values appear first. Default is 0 for all items.",
+    topic: "Flexbox"
+  },
+  {
+    question: "What is the default value of 'align-items'?",
+    options: ["center", "flex-start", "stretch", "baseline"],
+    correct: 2,
+    explanation: "align-items defaults to stretch — flex items stretch to fill the container's cross-axis height.",
+    topic: "Flexbox"
+  },
+  {
+    question: "Which are correct about the 'order' property? (Select all that apply)",
+    options: ["Default value for all items is 0", "Lower order values appear first", "Negative values are allowed", "It changes the actual DOM order"],
+    correct: [0, 1, 2],
+    explanation: "order defaults to 0, lower appears first, negatives are valid. It only changes VISUAL order — DOM order is unchanged.",
+    topic: "Flexbox",
+    type: "multi"
+  },
+  {
+    question: "Which are valid align-items values? (Select all that apply)",
+    options: ["flex-start", "center", "stretch", "space-between"],
+    correct: [0, 1, 2],
+    explanation: "flex-start, center, and stretch are valid align-items values. space-between is a justify-content value.",
+    topic: "Flexbox",
+    type: "multi"
+  },
+  {
+    question: "When flex-direction is 'column', which statements are true? (Select all that apply)",
+    options: ["The main axis is vertical", "justify-content controls vertical spacing", "align-items controls horizontal alignment", "flex-grow affects the item's height"],
+    correct: [0, 1, 2, 3],
+    explanation: "In column direction: main axis is vertical, justify-content is vertical, align-items is horizontal, and flex-grow grows height.",
+    topic: "Flexbox",
+    type: "multi"
+  },
+
+  // ─── Grid (extra) ───
+  {
+    question: "What does 'grid-column: span 2' mean?",
+    options: ["Item starts at column 2", "Item spans across 2 columns from its current position", "Item takes 2% of grid width", "Item is placed in grid area 2"],
+    correct: 1,
+    explanation: "span 2 means the item occupies 2 column tracks from wherever it is placed.",
+    topic: "Grid"
+  },
+  {
+    question: "What does 'grid-auto-flow: column' do?",
+    options: ["Creates columns automatically", "Places auto-placed items in columns instead of rows", "Makes all columns the same size", "Removes empty columns"],
+    correct: 1,
+    explanation: "By default grid-auto-flow is row (fills row by row). Setting it to column fills column by column instead.",
+    topic: "Grid"
+  },
+  {
+    question: "What does 'grid-template-columns: 1fr 2fr 1fr' create?",
+    options: ["3 equal columns", "3 columns where middle is twice as wide as the others", "3 columns of 1px, 2px, 1px", "2 columns"],
+    correct: 1,
+    explanation: "Total 4fr — first and last take 1fr each (25%), middle takes 2fr (50%).",
+    topic: "Grid"
+  },
+  {
+    question: "What does 'gap: 10px 20px' mean in CSS Grid?",
+    options: ["Column gap 10px, row gap 20px", "Row gap 10px, column gap 20px", "All gaps alternate 10px and 20px", "Padding 10px, margin 20px"],
+    correct: 1,
+    explanation: "gap shorthand: first value is row-gap, second is column-gap.",
+    topic: "Grid"
+  },
+  {
+    question: "Which property controls the size of implicitly created rows?",
+    options: ["grid-template-rows", "grid-auto-rows", "row-size", "grid-implicit-rows"],
+    correct: 1,
+    explanation: "grid-auto-rows sets the height of rows that are auto-created by the implicit grid.",
+    topic: "Grid"
+  },
+  {
+    question: "What is the shorthand for grid-row and grid-column together?",
+    options: ["grid-place", "grid-area", "grid-span", "grid-position"],
+    correct: 1,
+    explanation: "grid-area is the shorthand: grid-row-start / grid-column-start / grid-row-end / grid-column-end.",
+    topic: "Grid"
+  },
+  {
+    question: "Which are valid ways to make a grid item span multiple columns? (Select all that apply)",
+    options: ["grid-column: 1 / 3", "grid-column: span 2", "grid-column: 1 / span 2", "column-span: 2"],
+    correct: [0, 1, 2],
+    explanation: "All three CSS Grid syntaxes are valid for spanning columns. column-span is not a standard CSS Grid property.",
+    topic: "Grid",
+    type: "multi"
+  },
+  {
+    question: "Which are correct about 'gap' in CSS Grid? (Select all that apply)",
+    options: ["gap is shorthand for row-gap and column-gap", "gap: 10px sets both row and column gap to 10px", "gap: 10px 20px sets row 10px, column 20px", "gap adds space inside grid items"],
+    correct: [0, 1, 2],
+    explanation: "gap is the shorthand, one value sets both, two values set row then column. gap adds space BETWEEN tracks, not inside items.",
+    topic: "Grid",
+    type: "multi"
+  },
+  {
+    question: "Which are true about the implicit grid? (Select all that apply)",
+    options: ["Created when items exceed the explicitly defined grid", "grid-auto-rows controls implicit row sizes", "grid-auto-columns controls implicit column sizes", "Implicit grid tracks cannot be styled"],
+    correct: [0, 1, 2],
+    explanation: "The implicit grid auto-creates tracks for overflow items. grid-auto-rows and grid-auto-columns control those sizes. They CAN be styled.",
+    topic: "Grid",
+    type: "multi"
+  },
+
+  // ─── Visibility (extra) ───
+  {
+    question: "What is the difference between visibility: hidden and opacity: 0?",
+    options: ["No difference", "visibility:hidden blocks pointer events; opacity:0 still allows them", "opacity:0 blocks pointer events", "Both are identical in every way"],
+    correct: 1,
+    explanation: "visibility:hidden disables pointer events. opacity:0 is invisible but the element can still be clicked.",
+    topic: "Visibility"
+  },
+  {
+    question: "Which statements about visibility: hidden are correct? (Select all that apply)",
+    options: ["Element is invisible", "Element still takes up space in the layout", "Pointer events are disabled", "Element is removed from the DOM"],
+    correct: [0, 1, 2],
+    explanation: "visibility:hidden makes element invisible, keeps its space, and disables pointer events. It is NOT removed from the DOM.",
+    topic: "Visibility",
+    type: "multi"
+  },
+
+  // ─── Cursor (extra) ───
+  {
+    question: "Which property is used to change the mouse cursor appearance?",
+    options: ["mouse-style", "cursor", "pointer", "icon"],
+    correct: 1,
+    explanation: "The cursor property controls the appearance of the mouse pointer.",
+    topic: "Cursor"
+  },
+  {
+    question: "What does cursor: not-allowed show?",
+    options: ["A loading spinner", "A circle with a line through it, indicating something is disabled", "An arrow cursor", "A text cursor"],
+    correct: 1,
+    explanation: "cursor: not-allowed shows a circle-with-line icon, typically used on disabled buttons or inputs.",
+    topic: "Cursor"
+  },
+
+  // ─── calc() (extra) ───
+  {
+    question: "What does the calc() function allow you to do?",
+    options: ["Generate random numbers", "Perform calculations mixing different CSS units", "Get the page height", "Check conditions"],
+    correct: 1,
+    explanation: "calc() lets you mix different units in calculations, e.g., width: calc(100% - 20px).",
+    topic: "calc()"
+  },
+
+  // ─── Positioning (extra) ───
+  {
+    question: "What is the default value of the 'position' property?",
+    options: ["relative", "absolute", "static", "fixed"],
+    correct: 2,
+    explanation: "All elements are position: static by default.",
+    topic: "Positioning"
+  },
+  {
+    question: "Which position values remove an element from normal document flow? (Select all that apply)",
+    options: ["absolute", "fixed", "relative", "sticky"],
+    correct: [0, 1],
+    explanation: "absolute and fixed remove elements from normal flow. relative and sticky keep the element in flow.",
+    topic: "Positioning",
+    type: "multi"
+  },
+  {
+    question: "Which are true about position: relative? (Select all that apply)",
+    options: ["Element stays in normal document flow", "Can be offset using top, left, right, bottom", "Creates a positioning context for absolute children", "Removes the element from flow like absolute"],
+    correct: [0, 1, 2],
+    explanation: "relative keeps element in flow, allows offset properties, and creates a containing block for absolute children. It does NOT remove from flow.",
+    topic: "Positioning",
+    type: "multi"
+  },
+
+  // ─── Z-Index (extra) ───
+  {
+    question: "Which conditions are required for z-index to work? (Select all that apply)",
+    options: ["Element must have a position other than static", "A stacking context must exist", "The element must be a flex item", "Element must have position: relative, absolute, fixed, or sticky"],
+    correct: [0, 1, 3],
+    explanation: "z-index requires a non-static position and works within stacking contexts. Being a flex item is not required.",
+    topic: "Z-Index",
+    type: "multi"
+  },
+
+  // ─── Overflow (extra) ───
+  {
+    question: "What does overflow: hidden do?",
+    options: ["Hides the entire element", "Clips content that overflows outside the container", "Adds a scrollbar", "Changes the content size"],
+    correct: 1,
+    explanation: "overflow: hidden clips any content that goes beyond the container's boundaries.",
+    topic: "Overflow"
+  },
+  {
+    question: "Which are true about overflow: auto? (Select all that apply)",
+    options: ["Adds scrollbars only when content overflows", "Is cleaner than overflow: scroll for most cases", "Always shows scrollbars regardless of content", "Hides overflowing content"],
+    correct: [0, 1],
+    explanation: "auto adds scrollbars only when needed, making it cleaner than scroll. It does NOT always show scrollbars.",
+    topic: "Overflow",
+    type: "multi"
+  },
+
+  // ─── Multiple Backgrounds (extra) ───
+  {
+    question: "Which are true about multiple backgrounds in CSS? (Select all that apply)",
+    options: ["Separated by commas in the background-image property", "First listed background appears on top", "Each layer can have its own position and size", "Maximum 2 backgrounds are allowed"],
+    correct: [0, 1, 2],
+    explanation: "Multiple backgrounds use commas, the first is on top, and each layer has independent settings. There is NO limit of 2.",
+    topic: "Multiple Backgrounds",
+    type: "multi"
+  },
+
+  // ─── Word-Wrap (extra) ───
+  {
+    question: "Which properties help handle long overflowing words? (Select all that apply)",
+    options: ["word-wrap: break-word", "overflow-wrap: break-word", "word-break: break-all", "text-overflow: break"],
+    correct: [0, 1, 2],
+    explanation: "word-wrap, overflow-wrap, and word-break all handle long text. text-overflow: break is not valid.",
+    topic: "Word-Wrap",
+    type: "multi"
+  },
+
+  // ─── Border-Radius (extra) ───
+  {
+    question: "How do you set only the top-left and top-right corners to be rounded?",
+    options: ["border-radius: 10px 10px 0 0", "border-radius: top 10px", "border-top-radius: 10px", "corner-top: 10px"],
+    correct: 0,
+    explanation: "border-radius: 10px 10px 0 0 sets top-left, top-right, bottom-right, bottom-left in clockwise order.",
+    topic: "Border-Radius"
+  },
+  {
+    question: "Which are correct ways to use border-radius? (Select all that apply)",
+    options: ["border-radius: 10px (all corners)", "border-radius: 50% (circle)", "border-top-left-radius: 5px (single corner)", "border-radius: round"],
+    correct: [0, 1, 2],
+    explanation: "All-corners shorthand, 50% for circles, and individual corner properties are valid. 'round' is not a valid value.",
+    topic: "Border-Radius",
+    type: "multi"
+  },
+
+  // ─── Box-Shadow (extra) ───
+  {
+    question: "How do you add multiple box shadows to one element?",
+    options: ["Write the property multiple times", "Separate shadows with commas in one property", "Use an array", "Not possible"],
+    correct: 1,
+    explanation: "box-shadow: 2px 2px red, 4px 4px blue; — multiple shadows separated by commas.",
+    topic: "Box-Shadow"
+  },
+  {
+    question: "What does adding 'inset' to box-shadow do?",
+    options: ["Makes shadow larger", "Makes the shadow appear inside the element instead of outside", "Removes the shadow", "Makes shadow more blurry"],
+    correct: 1,
+    explanation: "inset keyword makes the shadow appear inside the element's border, creating an inner shadow effect.",
+    topic: "Box-Shadow"
+  },
+
+  // ─── Text-Shadow (extra) ───
+  {
+    question: "What does the text-shadow property do?",
+    options: ["Adds shadow behind a box", "Adds a shadow effect behind text characters", "Adds shadow on an image", "Adds shadow on a border"],
+    correct: 1,
+    explanation: "text-shadow adds a shadow effect specifically behind text characters.",
+    topic: "Text-Shadow"
+  },
+  {
+    question: "Can you add multiple text shadows to one element?",
+    options: ["No, only one is allowed", "Yes, separate them with commas", "Yes, using multiple text-shadow properties", "Only with JavaScript"],
+    correct: 1,
+    explanation: "Multiple text shadows can be applied using comma separation: text-shadow: 1px 1px red, 2px 2px blue;",
+    topic: "Text-Shadow"
+  },
+
+  // ─── Transforms (extra) ───
+  {
+    question: "What does transform: rotate(45deg) do?",
+    options: ["Moves element 45px to the right", "Rotates the element 45 degrees", "Scales element by 45%", "Moves element 45px up"],
+    correct: 1,
+    explanation: "rotate() rotates an element by the specified number of degrees.",
+    topic: "Transforms"
+  },
+  {
+    question: "What does the transform-origin property control?",
+    options: ["Removes the transform", "Sets the pivot point around which the transform occurs", "Sets the transform speed", "Defines multiple transforms"],
+    correct: 1,
+    explanation: "transform-origin defines the point around which rotation or scaling occurs (default: center center).",
+    topic: "Transforms"
+  },
+  {
+    question: "Which statements about CSS transforms are correct? (Select all that apply)",
+    options: ["Transforms do not affect surrounding elements in layout", "Multiple transforms can be chained in one declaration", "transform: scale(1) has no visible effect", "transform always requires a transition to work"],
+    correct: [0, 1, 2],
+    explanation: "Transforms don't affect layout of others, multiple can be chained, and scale(1) = no change. Transforms do NOT require a transition.",
+    topic: "Transforms",
+    type: "multi"
+  },
+
+  // ─── Root Element (extra) ───
+  {
+    question: "Why is :root preferred for declaring CSS variables?",
+    options: ["It loads faster", "Variables declared in :root are accessible throughout the entire document", "It has lower specificity", "It only works in modern browsers"],
+    correct: 1,
+    explanation: ":root is the highest-level element, so variables declared there cascade down to every element on the page.",
+    topic: "Root Element"
+  },
+
+  // ─── CSS Variables (extra) ───
+  {
+    question: "Where is it best practice to declare CSS variables for global access?",
+    options: ["Inside body", "Inside :root", "Inside every selector", "Inside head"],
+    correct: 1,
+    explanation: "Declaring variables in :root makes them accessible throughout the entire document.",
+    topic: "CSS Variables"
+  },
+  {
+    question: "Can CSS variables be overridden inside a specific selector?",
+    options: ["No, they are always global", "Yes, redeclaring the variable inside a selector overrides it for that scope", "Only with !important", "Only in external CSS files"],
+    correct: 1,
+    explanation: "CSS variables follow the cascade — redeclaring inside a selector overrides the value for that element and its children.",
+    topic: "CSS Variables"
+  },
+  {
+    question: "Which are valid CSS variable declarations? (Select all that apply)",
+    options: ["--primary-color: blue", "--font-size: 16px", "--gap: 1rem 2rem", "$color: red"],
+    correct: [0, 1, 2],
+    explanation: "CSS variables start with -- and can hold any valid CSS value. $color is Sass syntax, not standard CSS.",
+    topic: "CSS Variables",
+    type: "multi"
+  },
+
+  // ─── Transitions (extra) ───
+  {
+    question: "What does transition-delay do?",
+    options: ["Cancels the transition", "Waits a specified time before starting the transition", "Slows the transition permanently", "Repeats the transition"],
+    correct: 1,
+    explanation: "transition-delay causes the transition to start after a specified delay time.",
+    topic: "Transitions"
+  },
+  {
+    question: "Which sub-properties make up the transition shorthand? (Select all that apply)",
+    options: ["transition-property", "transition-duration", "transition-timing-function", "transition-color"],
+    correct: [0, 1, 2],
+    explanation: "transition shorthand includes property, duration, timing-function, and delay. 'transition-color' does not exist.",
+    topic: "Transitions",
+    type: "multi"
+  },
+  {
+    question: "Which statements about CSS transitions are correct? (Select all that apply)",
+    options: ["Transitions require a trigger like :hover to activate", "transition: all applies to all animatable properties", "Transitions can animate between any two values", "Transitions loop automatically by default"],
+    correct: [0, 1, 2],
+    explanation: "Transitions need a state change trigger, 'all' targets every property, and values must be interpolatable. Transitions do NOT loop automatically.",
+    topic: "Transitions",
+    type: "multi"
+  },
+
+  // ─── Extra questions to reach 248 ───
+  {
+    question: "What does overflow-x: hidden do?",
+    options: ["Hides the entire element", "Hides content that overflows horizontally only", "Hides content that overflows vertically", "Adds a horizontal scrollbar"],
+    correct: 1,
+    explanation: "overflow-x controls only horizontal overflow. Setting it to hidden clips content going beyond the left/right edges.",
+    topic: "Overflow"
+  },
+  {
+    question: "What does cursor: crosshair show?",
+    options: ["A hand icon", "A plus/crosshair icon", "A loading spinner", "A text cursor"],
+    correct: 1,
+    explanation: "cursor: crosshair shows a + crosshair icon, often used in drawing or precision tools.",
+    topic: "Cursor"
+  },
+  {
+    question: "What does word-break: break-all do?",
+    options: ["Deletes all words", "Allows breaking between any two characters, even mid-word", "Only breaks at spaces", "Breaks at hyphens only"],
+    correct: 1,
+    explanation: "word-break: break-all allows line breaks anywhere in the text, even in the middle of a word.",
+    topic: "Word-Wrap"
+  },
+  {
+    question: "What does the 'z-index: -1' do?",
+    options: ["Removes the element", "Places the element behind its parent", "Makes element invisible", "Has no effect"],
+    correct: 1,
+    explanation: "A negative z-index places the element behind its stacking context parent, useful for background effects.",
+    topic: "Z-Index"
+  },
+  {
+    question: "Which are true about multiple backgrounds? (Select all that apply)",
+    options: ["Each background can have a different repeat value", "Each background can have a different size", "They are defined in background-image with commas", "All backgrounds must be images"],
+    correct: [0, 1, 2],
+    explanation: "Each background layer is independent — different repeat, size, and position. Backgrounds can also be gradients, not just images.",
+    topic: "Multiple Backgrounds",
+    type: "multi"
+  },
+  {
+    question: "What does list-style shorthand combine? (Select all that apply)",
+    options: ["list-style-type", "list-style-position", "list-style-image", "list-style-color"],
+    correct: [0, 1, 2],
+    explanation: "list-style shorthand combines list-style-type, list-style-position, and list-style-image. list-style-color does not exist.",
+    topic: "List Style",
+    type: "multi"
+  },
+  {
+    question: "What does transform: skewX(20deg) do?",
+    options: ["Rotates element 20 degrees", "Tilts the element along the X axis by 20 degrees", "Moves element 20px on X axis", "Scales element by 20%"],
+    correct: 1,
+    explanation: "skewX() slants/tilts an element along the horizontal axis by the specified angle.",
+    topic: "Transforms"
+  },
+  {
+    question: "What is animation-direction: alternate used for?",
+    options: ["Plays animation in reverse only", "Makes animation play forward then backward alternately", "Plays animation randomly", "Skips every other animation cycle"],
+    correct: 1,
+    explanation: "alternate makes the animation play forward on odd iterations and backward on even iterations — creating a ping-pong effect.",
+    topic: "Animations"
+  },
+  {
+    question: "What does the @keyframes 'from' keyword represent?",
+    options: ["100% of the animation", "0% — the starting state of the animation", "50% midpoint", "The element's default state"],
+    correct: 1,
+    explanation: "from is equivalent to 0% — it defines the starting state of the animation.",
+    topic: "Animations"
+  },
+  {
+    question: "What does transition: all 0s do?",
+    options: ["Disables all transitions", "Makes all property changes instant (no animation)", "Removes all CSS styles", "Freezes the element"],
+    correct: 1,
+    explanation: "A duration of 0s means the transition happens instantly — effectively disabling the smooth animation.",
+    topic: "Transitions"
+  },
+  {
+    question: "What is the purpose of the calc() operator spaces rule?",
+    options: ["Spaces are optional in calc()", "Spaces are required around + and - operators in calc()", "Spaces are required around * and / only", "No spaces allowed in calc()"],
+    correct: 1,
+    explanation: "calc() requires spaces around + and - operators (e.g. calc(100% - 20px)) to avoid ambiguity with signs.",
+    topic: "calc()"
+  },
+  {
+    question: "What does 'grid-auto-flow: dense' do?",
+    options: ["Makes grid items larger", "Fills in holes in the grid by placing smaller items in gaps", "Removes all gaps", "Makes all items the same size"],
+    correct: 1,
+    explanation: "dense fills in gaps in the grid by allowing smaller items to backtrack and fill empty spaces.",
+    topic: "Grid"
+  },
+
+  // ─── Animations ───
+  {
+    question: "Which rule is used to define a CSS animation?",
+    options: ["@transition", "@keyframes", "@animate", "@motion"],
+    correct: 1,
+    explanation: "@keyframes defines the animation steps. Then the animation property applies it to an element.",
+    topic: "Animations"
+  },
+  {
+    question: "What does animation-iteration-count: infinite do?",
+    options: ["Animation never starts", "Animation repeats forever in a loop", "Animation runs once", "Animation runs randomly"],
+    correct: 1,
+    explanation: "infinite makes the animation loop continuously without stopping.",
+    topic: "Animations"
+  },
+  {
+    question: "What does animation-fill-mode: forwards do?",
+    options: ["Animation plays forward direction", "Element stays in the final keyframe state after animation ends", "Animation applies styles before it starts", "Animation reverses after finishing"],
+    correct: 1,
+    explanation: "forwards keeps the element at its 100% keyframe state after the animation finishes.",
+    topic: "Animations"
+  },
+  {
+    question: "Which are valid sub-properties of the animation shorthand? (Select all that apply)",
+    options: ["animation-duration", "animation-delay", "animation-iteration-count", "animation-color"],
+    correct: [0, 1, 2],
+    explanation: "duration, delay, and iteration-count are valid animation sub-properties. animation-color does not exist.",
+    topic: "Animations",
+    type: "multi"
+  },
 ];
