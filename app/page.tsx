@@ -36,12 +36,12 @@ export default function Home() {
           onKeyDown={(e) => e.key === 'Enter' && startQuiz()}
         />
         
-        <button
-          onClick={startQuiz}
-          className="w-full bg-navy text-white py-4 rounded-2xl font-bold text-lg hover:bg-opacity-90 transition mb-4 tracking-tight"
-        >
-          Start 50-Question Assessment
-        </button>
+          <button
+            onClick={startQuiz}
+            className="w-full bg-navy text-white py-4 rounded-2xl font-bold text-lg hover:bg-opacity-90 transition mb-4 tracking-tight"
+          >
+            Start CSS Assessment
+          </button>
       </div>
     </div>
   );

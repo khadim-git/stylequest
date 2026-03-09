@@ -2,21 +2,28 @@ import { collection, addDoc, getDocs, doc, writeBatch, deleteDoc, setDoc, server
 import { db } from './firebase';
 import { CSS_TOPICS } from './quiz-topics';
 
-export async function saveQuizAttempt(participantId: string, name: string, questions: any[], answers: number[], startTime: Date, duration: number) {
+export async function saveQuizAttempt(participantId: string, name: string, questions: any[], answers: (number | number[])[], startTime: Date, duration: number) {
   const topicStats: Record<string, { correct: number; total: number }> = {};
   
   CSS_TOPICS.forEach(topic => {
     topicStats[topic] = { correct: 0, total: 0 };
   });
 
+  let score = 0;
   questions.forEach((q, i) => {
     if (topicStats[q.topic]) {
       topicStats[q.topic].total++;
-      if (answers[i] === q.correct) topicStats[q.topic].correct++;
+      const a = answers[i];
+      const isCorrect = Array.isArray(q.correct)
+        ? Array.isArray(a) && a.length === q.correct.length && q.correct.every(c => a.includes(c))
+        : a === q.correct;
+      
+      if (isCorrect) {
+        topicStats[q.topic].correct++;
+        score++;
+      }
     }
   });
-
-  const score = answers.filter((a, i) => a === questions[i].correct).length;
   
   await setDoc(doc(db, 'participants', participantId), {
     id: participantId,
@@ -27,8 +34,8 @@ export async function saveQuizAttempt(participantId: string, name: string, quest
     participantId,
     participantName: name,
     score,
-    totalQuestions: 50,
-    percentageScore: Math.round((score / 50) * 100),
+    totalQuestions: questions.length,
+    percentageScore: Math.round((score / questions.length) * 100),
     durationTakenSeconds: duration,
     status: 'completed',
     startTime,
@@ -39,12 +46,17 @@ export async function saveQuizAttempt(participantId: string, name: string, quest
   const batch = writeBatch(db);
   questions.forEach((q, i) => {
     const qRef = doc(db, `quizAttempts/${attemptRef.id}/questions`, `q${i}`);
+    const a = answers[i];
+    const isCorrect = Array.isArray(q.correct)
+      ? Array.isArray(a) && a.length === q.correct.length && q.correct.every(c => a.includes(c))
+      : a === q.correct;
+    
     batch.set(qRef, {
       questionText: q.question,
       options: q.options,
       correctOptionIndex: q.correct,
       selectedOptionIndex: answers[i],
-      isCorrect: answers[i] === q.correct,
+      isCorrect,
       topic: q.topic,
       order: i
     });
