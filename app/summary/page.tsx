@@ -50,7 +50,7 @@ export default function SummaryPage() {
             </div>
             <div className="bg-green-50 p-6 rounded-2xl text-center">
               <p className="text-sm text-green-600 font-semibold mb-2">Points Secured</p>
-              <p className="text-5xl font-bold text-green-700">{summaryData.score}/119</p>
+              <p className="text-5xl font-bold text-green-700">{summaryData.score}/248</p>
             </div>
             <div className="bg-purple-50 p-6 rounded-2xl text-center">
               <p className="text-sm text-purple-600 font-semibold mb-2">Time Taken</p>

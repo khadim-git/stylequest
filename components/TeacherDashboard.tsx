@@ -48,7 +48,7 @@ export default function TeacherDashboard({ onBack }: { onBack: () => void }) {
           
           <div className="bg-white rounded-lg shadow p-6 mb-6 animate-fadeInUp">
             <h2 className="text-2xl font-bold mb-2">{selectedAttempt.participantName}</h2>
-            <p className="text-gray-600">Score: {selectedAttempt.score}/119 ({selectedAttempt.percentageScore}%)</p>
+            <p className="text-gray-600">Score: {selectedAttempt.score}/248 ({selectedAttempt.percentageScore}%)</p>
             <p className="text-gray-600">Duration: {Math.floor(selectedAttempt.durationTakenSeconds / 60)}m {selectedAttempt.durationTakenSeconds % 60}s</p>
           </div>
 
