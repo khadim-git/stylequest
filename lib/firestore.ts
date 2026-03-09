@@ -15,7 +15,7 @@ export async function saveQuizAttempt(participantId: string, name: string, quest
       topicStats[q.topic].total++;
       const a = answers[i];
       const isCorrect = Array.isArray(q.correct)
-        ? Array.isArray(a) && a.length === q.correct.length && q.correct.every(c => a.includes(c))
+        ? Array.isArray(a) && a.length === q.correct.length && q.correct.every((c: number) => (a as number[]).includes(c))
         : a === q.correct;
       
       if (isCorrect) {
@@ -48,7 +48,7 @@ export async function saveQuizAttempt(participantId: string, name: string, quest
     const qRef = doc(db, `quizAttempts/${attemptRef.id}/questions`, `q${i}`);
     const a = answers[i];
     const isCorrect = Array.isArray(q.correct)
-      ? Array.isArray(a) && a.length === q.correct.length && q.correct.every(c => a.includes(c))
+      ? Array.isArray(a) && a.length === q.correct.length && q.correct.every((c: number) => (a as number[]).includes(c))
       : a === q.correct;
     
     batch.set(qRef, {
