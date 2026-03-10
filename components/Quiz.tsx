@@ -125,6 +125,13 @@ export default function Quiz({ name, userId }: { name: string; userId: string })
   };
 
   const finishQuiz = async () => {
+    console.log('🌟 Quiz finished! Score:', answers.filter((a, i) => {
+      const q = questions[i];
+      if (Array.isArray(q.correct)) {
+        return Array.isArray(a) && a.length === q.correct.length && q.correct.every(c => (a as number[]).includes(c));
+      }
+      return a === q.correct;
+    }).length);
     setFinished(true);
     const duration = Math.floor((new Date().getTime() - startTime.getTime()) / 1000);
     await saveQuizAttempt(userId, name, questions, answersRef.current as number[], startTime, duration);
