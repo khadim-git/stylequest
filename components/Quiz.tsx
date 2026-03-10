@@ -5,7 +5,7 @@ import { fallbackQuestions } from '@/lib/questions';
 import { saveQuizAttempt } from '@/lib/firestore';
 
 export default function Quiz({ name, userId }: { name: string; userId: string }) {
-  const [questions, setQuestions] = useState(fallbackQuestions);
+  const [questions, setQuestions] = useState(fallbackQuestions.slice(0, 10));
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState<(number | number[])[]>(Array(questions.length).fill(-1));
   const [timeLeft, setTimeLeft] = useState(3000);
