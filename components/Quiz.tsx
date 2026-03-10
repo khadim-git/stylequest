@@ -6,6 +6,7 @@ import { saveQuizAttempt } from '@/lib/firestore';
 
 export default function Quiz({ name, userId }: { name: string; userId: string }) {
   const [questions, setQuestions] = useState(fallbackQuestions.slice(0, 10));
+  console.log('📚 Total questions:', fallbackQuestions.slice(0, 10).length);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState<(number | number[])[]>(Array(questions.length).fill(-1));
   const [timeLeft, setTimeLeft] = useState(3000);
@@ -125,16 +126,16 @@ export default function Quiz({ name, userId }: { name: string; userId: string })
   };
 
   const finishQuiz = async () => {
-    console.log('🌟 Quiz finished! Score:', answers.filter((a, i) => {
-      const q = questions[i];
-      if (Array.isArray(q.correct)) {
-        return Array.isArray(a) && a.length === q.correct.length && q.correct.every(c => (a as number[]).includes(c));
-      }
-      return a === q.correct;
-    }).length);
+    console.log('🌟 Quiz finished!');
     setFinished(true);
     const duration = Math.floor((new Date().getTime() - startTime.getTime()) / 1000);
-    await saveQuizAttempt(userId, name, questions, answersRef.current as number[], startTime, duration);
+    console.log('💾 Calling saveQuizAttempt...');
+    try {
+      await saveQuizAttempt(userId, name, questions, answersRef.current as number[], startTime, duration);
+      console.log('✅ saveQuizAttempt completed');
+    } catch (error: any) {
+      console.error('❌ saveQuizAttempt error:', error.message);
+    }
   };
 
   if (finished) {
