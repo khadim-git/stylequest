@@ -11,6 +11,19 @@ const firebaseConfig = {
   appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
 };
 
+console.log('🔥 Firebase Config:', {
+  apiKey: firebaseConfig.apiKey ? '✓ Set' : '✗ Missing',
+  authDomain: firebaseConfig.authDomain ? '✓ Set' : '✗ Missing',
+  projectId: firebaseConfig.projectId ? '✓ Set' : '✗ Missing',
+  storageBucket: firebaseConfig.storageBucket ? '✓ Set' : '✗ Missing',
+  messagingSenderId: firebaseConfig.messagingSenderId ? '✓ Set' : '✗ Missing',
+  appId: firebaseConfig.appId ? '✓ Set' : '✗ Missing',
+});
+
 const app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApps()[0];
 export const db = getFirestore(app);
 export const auth = getAuth(app);
+
+console.log('✅ Firebase initialized successfully');
+console.log('📊 Firestore:', db ? 'Connected' : 'Not Connected');
+console.log('🔐 Auth:', auth ? 'Connected' : 'Not Connected');
