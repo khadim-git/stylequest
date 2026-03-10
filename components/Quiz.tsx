@@ -190,7 +190,11 @@ export default function Quiz({ name, userId }: { name: string; userId: string })
     localStorage.setItem('quizSummary', JSON.stringify(summaryData));
     localStorage.setItem('quizTopics', JSON.stringify(topicStats));
     localStorage.setItem('quizReview', JSON.stringify(reviewData));
-    window.location.href = '/summary';
+    console.log('✅ Data saved to localStorage');
+    // Redirect after a delay to allow logs to show
+    setTimeout(() => {
+      window.location.href = '/summary';
+    }, 1000);
 
     return null;
   }
